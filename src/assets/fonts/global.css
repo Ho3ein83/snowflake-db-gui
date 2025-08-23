@@ -58,24 +58,6 @@
     url("./kalameh/bold/kalameh_bold.ttf") format("truetype");
 }
 
-/* Josephine sans */
-@font-face {
-    font-family: 'josephine-sans';
-    font-weight: normal;
-    font-display: swap;
-    src: url("./josephine-sans/regular/josephine-sans-regular.woff2") format("woff2"),
-    url("./josephine-sans/regular/josephine-sans-regular.woff") format("woff"),
-    url("./josephine-sans/regular/josephine-sans-regular.ttf") format("truetype");
-}
-@font-face {
-    font-family: 'josephine-sans';
-    font-weight: bold;
-    font-display: swap;
-    src: url("./josephine-sans/bold/josephine-sans-bold.woff2") format("woff2"),
-    url("./josephine-sans/bold/josephine-sans-bold.woff") format("woff"),
-    url("./josephine-sans/bold/josephine-sans-bold.ttf") format("truetype");
-}
-
 /* Shabnam English digits */
 @font-face {
     font-family: 'shabnam-en';

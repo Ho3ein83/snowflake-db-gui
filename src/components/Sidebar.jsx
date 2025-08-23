@@ -1,12 +1,14 @@
 import "../assets/css/Sidebar.css";
 import useAppContext from "../contexts/AppContext.jsx";
-import { Box, Button, CardActionArea, Divider, List, ListItemButton, ListItemIcon, ListItemText, Stack, Typography } from "@mui/material";
+import { Box, CardActionArea, Divider, List, Stack, Typography } from "@mui/material";
 import useThemeMode from "../hooks/useThemeMode.js";
 import { IconAdjustmentsAlt, IconDatabase, IconHome, IconLogout } from "@tabler/icons-react";
 import useTranslate from "../languages/useTranslate.jsx";
 import { useEffect, useState } from "react";
 import { getHashPage, LocalDatabase } from "../core/Utils.js";
 import AskDialog from "./AskDialog.jsx";
+import snowflakeSvg from "../../public/snowflake.svg";
+import snowflakeBrightSvg from "../../public/snowflake-bright.svg";
 
 export default function Sidebar(){
 
@@ -98,9 +100,7 @@ export default function Sidebar(){
 
             <Stack direction="column" alignItems="center" justifyContent="center" gap={1} sx={{ height: "86px" }}>
 
-                <img src={actualTheme === "light" ? "/snowflake.svg" : "/snowflake-bright.svg"} alt="Snowflake" style={{ width: 70 }} />
-
-                {/*<Typography variant="h4">{__("app_name")}</Typography>*/}
+                <img src={actualTheme === "light" ? snowflakeSvg : snowflakeBrightSvg} alt="Snowflake" style={{ width: 70 }} />
 
             </Stack>
 

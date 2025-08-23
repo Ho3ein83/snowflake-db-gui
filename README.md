@@ -11,7 +11,7 @@
 This React app is a web interface for managing your database. SnowflakeDB comes with its own web interface, if you need to customize it, you can use this repository, otherwise you don't need this app.
 
 ## Configuration
-To change the configuration of the web interface, open `index.html` file located in app directory.
+To change the configuration of the web interface, open [index.html](https://github.com/Ho3ein83/snowflake-db-gui/blob/master/index.html) file located in the main directory.
 
 This is how the configuration looks like, which you can change as you need:
 ```javascript
@@ -82,7 +82,7 @@ vite
 ```
 or run this to build the project:
 ```bash
-vite build
+vite build --base=./
 ```
 
 ## Features
