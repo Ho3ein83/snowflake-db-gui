@@ -54,18 +54,28 @@ Before building the app (or even after), you need to set up your socket configur
 
 ## Installation
 
-###  1. Install the requirements
+###  1. Download
+Clone the repository first:
+```bash
+git clone https://github.com/Ho3ein83/snowflake-db-gui
+```
+Switch to the directory:
+```bash
+cd snowflake-db-gui
+```
+
+###  2. Install the requirements
 Run this command to install the requirements:
 ```bash
 npm install
 ```
 
-### 2. Configuration (optional)
+### 3. Configuration (optional)
 Change socket configuration from `index.html` file.
 
 If you are using it on localhost with default port, you don't need to change it.
 
-### 3. Build or Run
+### 4. Build or Run
 Run vite for development:
 ```bash
 vite
