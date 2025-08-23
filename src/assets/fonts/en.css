@@ -1,0 +1,59 @@
+/**
+ * Kalameh font is considered a proprietary software.
+ * To gain information about the laws regarding the use of these fonts, please visit fontiran.com
+ * This set of fonts are used in this project under the license: 342VUY
+ */
+
+/* Kalameh English digits */
+@font-face {
+    font-family: 'kalameh';
+    font-weight: normal;
+    font-display: swap;
+    src: url("./kalameh/normal/kalameh_normal.woff2") format("woff2"),
+    url("./kalameh/normal/kalameh_normal.woff") format("woff"),
+    url("./kalameh/normal/kalameh_normal.ttf") format("truetype");
+}
+@font-face {
+    font-family: 'kalameh';
+    font-weight: bold;
+    font-display: swap;
+    src: url("./kalameh/bold/kalameh_bold.woff2") format("woff2"),
+    url("./kalameh/bold/kalameh_bold.woff") format("woff"),
+    url("./kalameh/bold/kalameh_bold.ttf") format("truetype");
+}
+
+/* Josephine sans */
+@font-face {
+    font-family: 'josephine-sans';
+    font-weight: normal;
+    font-display: swap;
+    src: url("./josephine-sans/regular/josephine-sans-regular.woff2") format("woff2"),
+    url("./josephine-sans/regular/josephine-sans-regular.woff") format("woff"),
+    url("./josephine-sans/regular/josephine-sans-regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: 'josephine-sans';
+    font-weight: bold;
+    font-display: swap;
+    src: url("./josephine-sans/bold/josephine-sans-bold.woff2") format("woff2"),
+    url("./josephine-sans/bold/josephine-sans-bold.woff") format("woff"),
+    url("./josephine-sans/bold/josephine-sans-bold.ttf") format("truetype");
+}
+
+/* Shabnam English digits */
+@font-face {
+    font-family: 'shabnam';
+    font-weight: normal;
+    font-display: swap;
+    src: url("./shabnam/normal/shabnam_normal.woff2") format("woff2"),
+    url("./shabnam/normal/shabnam_normal.woff") format("woff"),
+    url("./shabnam/normal/shabnam_normal.ttf") format("truetype");
+}
+@font-face {
+    font-family: 'shabnam';
+    font-weight: bold;
+    font-display: swap;
+    src: url("./shabnam/bold/shabnam_bold.woff2") format("woff2"),
+    url("./shabnam/bold/shabnam_bold.woff") format("woff"),
+    url("./shabnam/bold/shabnam_bold.ttf") format("truetype");
+}

@@ -1,0 +1,94 @@
+:root {
+    --sfd-sidebar-width: 290px;
+}
+
+.Sidebar {
+    position: fixed;
+    top: 0;
+    width: var(--sfd-sidebar-width);
+    height: 100svh;
+    background: var(--sfd-fg-color);
+    z-index: 999;
+}
+
+body.rtl .Sidebar {
+    right: calc(0px - var(--sfd-sidebar-width));
+    transition: right ease .3s;
+}
+
+body.ltr .Sidebar {
+    left: calc(0px - var(--sfd-sidebar-width));
+    transition: left ease .3s;
+}
+
+.SidebarSpacer {
+    background: var(--sfd-fg-color);
+    width: 0;
+}
+
+.SidebarNavMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.SidebarNavMenu > .MuiButtonBase-root {
+    width: 100%;
+    border-radius: 16px !important;
+}
+
+.SidebarNavContainer {
+    box-sizing: border-box;
+    height: calc(100svh - 86px);
+    padding: 16px;
+    overflow-y: auto;
+}
+
+.SidebarNavItem {
+    padding: 16px !important;
+    background: transparent;
+    transition: background-color ease .3s;
+}
+
+.SidebarNavItem.active {
+    color: var(--sfd-primary);
+    background: rgba(var(--sfd-primary-rgb), .06);
+}
+
+.SidebarNavItem.--red {
+    color: var(--sfd-color-error);
+}
+
+body.rtl .Sidebar.expand {
+    right: 0;
+}
+body.ltr .Sidebar.expand {
+    left: 0;
+}
+
+@media ( min-width: 900px ) {
+    .SidebarSpacer {
+        transition: width ease .3s;
+    }
+    .SidebarSpacer.expand {
+        width: var(--sfd-sidebar-width);
+    }
+}
+
+@media ( max-width: 899px ) {
+    .SidebarOverlay {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgb(0, 0, 0);
+        z-index: 998;
+        opacity: 0;
+        visibility: hidden;
+        transition: visibility ease .3s, opacity ease .3s;
+    }
+    .SidebarOverlay.visible {
+        opacity: .7;
+        visibility: visible;
+    }
+}

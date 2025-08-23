@@ -1,0 +1,27 @@
+/* Not used anywhere, just for IDE autocompletion */
+
+:root {
+    --sfd-font: "shabnam";
+    --sfd-title-font: "kalameh";
+    --sfd-text-color: #fff;
+    --sfd-primary: #4f14e6;
+    --sfd-primary-rgb: 79, 20, 230;
+    --sfd-secondary: #ce93d8;
+    --sfd-info: #ce93d8;
+    --sfd-success: #3dda84;
+    --sfd-error: #f55753;
+    --sfd-warning: #f6a04d;
+    --sfd-bg-color: #f8fafc;
+    --sfd-fg-color: #fff;
+    --sfd-color-error: #f55753;
+    --sfd-color-error-rgb: 245, 87, 83;
+    --sfd-color-info: #039be5;
+    --sfd-color-info-rgb: 3, 155, 229;
+    --sfd-color-success: #3dda84;
+    --sfd-color-success-rgb: 61, 218, 132;
+    --sfd-color-warning: #f6a04d;
+    --sfd-color-warning-rgb: 246, 160, 77;
+    --sfd-color-cyan: #00ACC1;
+    --sfd-color-cyan-rgb: 0, 172, 193;
+    --sfd-border-color: rgba(79, 20, 230, .1);
+}

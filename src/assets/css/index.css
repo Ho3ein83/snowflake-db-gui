@@ -1,0 +1,17 @@
+body {
+    font-family: "shabnam", sans-serif;
+    position: relative;
+    overflow-x: hidden !important;
+    margin: 0;
+    color: var(--sfd-text-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    font-family: var(--sfd-title-font) !important;
+}
+
+.waiting {
+    opacity: .7;
+    pointer-events: none;
+}
