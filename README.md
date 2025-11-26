@@ -80,7 +80,7 @@ Run vite for development:
 ```bash
 vite
 ```
-or run this to build the project:
+or build the project:
 ```bash
 vite build --base=./
 ```
