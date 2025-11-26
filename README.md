@@ -21,7 +21,7 @@ window.SF_CONFIG = {
     "default_theme_mode": "light",
     // Just for development and debug
     "render_logs": true,
-    // Token expiration in seconds, set it to 0 for no expiration (no recommended)
+    // Token expiration in seconds, set it to 0 for no expiration (not recommended)
     // Note: The expiration is only in your browser and after the token expired you can use it again the next time
     // you want to log in. Also, if the token gets expired while using the app it won't shut you down and you
     // can still do what you were doing, until you refresh the page and it'll ask you again for access token.
@@ -94,8 +94,9 @@ vite build --base=./
 - Add, edit or remove entries from database
 - See the memory usage of each entry
 - UI customization: Dark & light mode, multilingual
+- Benchmark your database
 
-<img width="800" style="border-radius:5px;" alt="thumbnail" src="https://amatris.ir/cdn/images/snowflake-db-gui-database.png?c=1">
+<img width="800" style="border-radius:5px;" alt="thumbnail" src="https://amatris.com/cdn/images/hero-img-dark-and-light.png">
 
 ## Languages
 Currently, there are two languages available:
