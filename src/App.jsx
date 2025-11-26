@@ -10,7 +10,7 @@ import { prefixer } from "stylis";
 import rtlPlugin from "stylis-plugin-rtl";
 
 // Components
-import { Box, Paper, Stack, ThemeProvider, useTheme } from "@mui/material";
+import { Box, Paper, Stack, ThemeProvider, Typography, useTheme } from "@mui/material";
 
 // Utilities
 import { getAppSetting, getAppSettingBool, getAppSettingInt, hexToRgb, isRtl, logDev, setCookie } from "./core/Utils.js";
@@ -30,10 +30,12 @@ import { HashRouter, Route, Routes } from "react-router-dom";
 import LazySuspense from "./components/LazySuspense.jsx";
 import { WebSocketProvider } from "./contexts/WebsocketProvider.jsx";
 import GlobalSnackbar from "./components/GlobalSnackbar.jsx";
+import ComingSoonNote from "./components/notes/ComingSoonNote.jsx";
 
 // Lazy pages
 const HomePageLazy = lazy(() => import("./pages/HomePage.jsx"));
 const DatabasePageLazy = lazy(() => import("./pages/DatabasePage.jsx"));
+const BenchmarkPageLazy = lazy(() => import("./pages/./BenchmarkPage"));
 
 function App() {
 
@@ -237,6 +239,14 @@ function App() {
 
                                             <Route path="/database" element={<LazySuspense>
                                                 <DatabasePageLazy/>
+                                            </LazySuspense>}/>
+
+                                            <Route path="/config" element={<LazySuspense>
+                                                <ComingSoonNote />
+                                            </LazySuspense>}/>
+
+                                            <Route path="/benchmark" element={<LazySuspense>
+                                                <BenchmarkPageLazy />
                                             </LazySuspense>}/>
 
                                         </Routes>

@@ -14,7 +14,8 @@ export default function AskDialog({
                                       onClose = null,
                                       closeOnAccept = true,
                                       closeOnDismiss = true,
-                                      children = null
+                                      children = null,
+                                      acceptOnEnter = false
                                   }) {
 
     const { __ } = useTranslate();
@@ -42,6 +43,7 @@ export default function AskDialog({
         <Dialog open={isOpen}
                 maxWidth="xs"
                 onClose={handleClose}
+                disableRestoreFocus
                 fullWidth>
 
             <Box sx={{ padding: "20px" }}>
@@ -53,7 +55,7 @@ export default function AskDialog({
                 {children}
 
                 <Stack direction="row" gap={1} flexWrap="wrap" sx={{ marginTop: 2 }}>
-                    <Button variant="contained" color={yesButtonColor ? yesButtonColor : "primary"} onClick={handleAccept}>{yesButtonText ? yesButtonText : __("yes")}</Button>
+                    <Button variant="contained" autoFocus color={yesButtonColor ? yesButtonColor : "primary"} onClick={handleAccept}>{yesButtonText ? yesButtonText : __("yes")}</Button>
                     {noButtonText ? <Button variant="text" color={noButtonColor ? noButtonColor : "primary"} onClick={handleDismiss}>{typeof noButtonText === "string" ? noButtonText : __("no")}</Button> : null}
                 </Stack>
 

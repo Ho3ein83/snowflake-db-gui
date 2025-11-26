@@ -2,7 +2,7 @@ import "../assets/css/Sidebar.css";
 import useAppContext from "../contexts/AppContext.jsx";
 import { Box, CardActionArea, Divider, List, Stack, Typography } from "@mui/material";
 import useThemeMode from "../hooks/useThemeMode.js";
-import { IconAdjustmentsAlt, IconDatabase, IconHome, IconLogout } from "@tabler/icons-react";
+import { IconAdjustmentsAlt, IconBrandSpeedtest, IconDatabase, IconHome, IconLogout } from "@tabler/icons-react";
 import useTranslate from "../languages/useTranslate.jsx";
 import { useEffect, useState } from "react";
 import { getHashPage, LocalDatabase } from "../core/Utils.js";
@@ -68,6 +68,14 @@ export default function Sidebar(){
             path: "config",
             label: "configuration",
             icon: IconAdjustmentsAlt,
+        });
+    }
+
+    if(currentAccess.hasAccess("db_read") && currentAccess.hasAccess("db_write")){
+        sidebarItems.push({
+            path: "benchmark",
+            label: "benchmark",
+            icon: IconBrandSpeedtest,
         });
     }
 

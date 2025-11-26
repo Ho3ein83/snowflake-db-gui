@@ -59,15 +59,14 @@ export default function HeapUsageMonitor(){
 
         <Typography variant="h5" textAlign="center" sx={{ padding: 2 }}>{__("database_heap_memory")}</Typography>
 
-        <SparkLineChart
-            data={usedHeapData}
-            height={80}
-            curve="linear"
-            showTooltip
-            showHighlight
-            area
-            valueFormatter={value => formatBytes(value)}
-            {...sparkLineChartSettings}
+        <SparkLineChart data={usedHeapData}
+                        height={80}
+                        curve="linear"
+                        showTooltip
+                        showHighlight
+                        area
+                        valueFormatter={value => formatBytes(value)}
+                        {...sparkLineChartSettings}
         />
 
     </>);

@@ -25,6 +25,8 @@ export default function useTranslate(){
 
         function _n(id, number){
             const str = l10n.getString((number <= 1 ? "single:" : "plural:") + id);
+            if(typeof str !== "string")
+                return "";
             return str.replace("%", number);
         }
 

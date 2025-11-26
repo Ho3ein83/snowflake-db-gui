@@ -151,9 +151,10 @@ export default function DatabasePage(){
         ];
     }, [currentLanguage, deletingQueue]);
 
-    function reloadDatabaseStats(){
+    function reloadDatabaseStats(useLoading = true){
 
-        setIsLoadingStats(true);
+        if(useLoading)
+            setIsLoadingStats(true);
 
         helper.fetch("dbStats", {
             parts: ["meids_count", "entries_count", "is_encrypted", "usage_bytes"]
@@ -200,6 +201,9 @@ export default function DatabasePage(){
                     }));
                 }
             }
+            else{
+                showSnackbar(__("error_occurred"), "error");
+            }
         }).finally(() => {
             setIsLoadingData(false);
         });
@@ -209,9 +213,14 @@ export default function DatabasePage(){
     useEffect(() => {
         reloadDatabaseStats();
         reloadDatabaseArchive();
+        function reloadStats(){
+            reloadDatabaseStats(false);
+        }
         eventBus.addEventListener("reload_database", reloadDatabaseArchive);
+        eventBus.addEventListener("reload_database_stats", reloadStats);
         return () => {
             eventBus.removeEventListener("reload_database", reloadDatabaseArchive);
+            eventBus.removeEventListener("reload_database_stats", reloadStats);
         }
     }, []);
 
@@ -345,6 +354,7 @@ export default function DatabasePage(){
                        }).then(r => {
                            if(r.success){
                                setGridRows(prev => prev.filter(row => row.key !== entryToDelete));
+                               reloadDatabaseStats(false);
                            }
                            else {
                                showSnackbar(__("error_occurred"), "error");

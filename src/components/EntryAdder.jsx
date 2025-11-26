@@ -93,13 +93,12 @@ function TypeValueSelector({ type, value, setValue, onEnter = null }){
 export default function EntryAdder({ keyName, defaultKey, open, onClose }){
 
     // Contexts
-    const currentAccess = useAppContext(state => state.currentAccess);
-    const currentLanguage = useAppContext(state => state.currentLanguage);
+    // const currentAccess = useAppContext(state => state.currentAccess);
+    // const currentLanguage = useAppContext(state => state.currentLanguage);
     const showSnackbar = useAppContext(state => state.showSnackbar);
 
     // Loading
     const [isWaiting, setIsWaiting] = useState(false);
-    const [isLoading, setIsLoading] = useState(false);
 
     // Form data
     const [selectedType, setSelectedType] = useState("string");
@@ -168,6 +167,7 @@ export default function EntryAdder({ keyName, defaultKey, open, onClose }){
         }).then(r => {
             if(r.success){
                 eventBus.dispatchEvent(new Event("reload_database"));
+                eventBus.dispatchEvent(new Event("reload_database_stats"));
                 showSnackbar(__("updated"), "success");
                 handleClose();
                 return;
@@ -185,7 +185,8 @@ export default function EntryAdder({ keyName, defaultKey, open, onClose }){
         <AskDialog open={open}
                    onClose={onClose}
                    title={__(isNew ? "add_entry" : "edit_entry")}
-                   yesButtonText={__(isNew ? "add" : "update")} noButtonText={__("cancel")}
+                   yesButtonText={__(isNew ? "add" : "update")}
+                   noButtonText={__("cancel")}
                    closeOnAccept={false}
                    onAccept={addEntry}>
 
@@ -197,7 +198,7 @@ export default function EntryAdder({ keyName, defaultKey, open, onClose }){
                            label={__("key_name")}
                            value={entryKey}
                            onChange={e => setEntryKey(e.target.value)}
-                           disabled={isLoading || !isNew || isWaiting}
+                           disabled={!isNew || isWaiting}
                            fullWidth />
 
                 <FormControl fullWidth>
@@ -205,7 +206,7 @@ export default function EntryAdder({ keyName, defaultKey, open, onClose }){
                     <Select variant="outlined"
                             labelId="entry-type-select"
                             label={__("type")}
-                            disabled={isLoading || isWaiting}
+                            disabled={isWaiting}
                             value={selectedType} onChange={e => setSelectedType(e.target.value)}>
                         <MenuItem value="string">string</MenuItem>
                         <MenuItem value="number">number</MenuItem>
@@ -215,7 +216,7 @@ export default function EntryAdder({ keyName, defaultKey, open, onClose }){
                 </FormControl>
 
                 {
-                    isLoading || isWaiting
+                    isWaiting
                     ?
                     null
                     :
