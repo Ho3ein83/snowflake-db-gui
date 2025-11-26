@@ -3,7 +3,7 @@
 ![SnowflakeDB](https://img.shields.io/badge/Snowflake-DB_GUI-purple)
 ![Project Status: Improving](https://img.shields.io/badge/Status-Improving-orange)
 
-<img width="800" style="border-radius:5px;" alt="thumbnail" src="https://amatris.ir/cdn/images/snowflake-db-gui-home.png?c=1">
+<img width="800" style="border-radius:5px;" alt="thumbnail" src="https://amatris.com/cdn/images/hero-img-dark-and-light.png">
 
 # SnowflakeDB Control Panel
 [SnowflakeDB](https://github.com/Ho3ein83/snowflake-db) is an advanced in-memory database which helps you easily make your own database or caching system.
@@ -96,7 +96,7 @@ vite build --base=./
 - UI customization: Dark & light mode, multilingual
 - Benchmark your database
 
-<img width="800" style="border-radius:5px;" alt="thumbnail" src="https://amatris.com/cdn/images/hero-img-dark-and-light.png">
+<img width="800" style="border-radius:5px;" alt="thumbnail" src="https://amatris.ir/cdn/images/snowflake-db-gui-database.png?c=1">
 
 ## Languages
 Currently, there are two languages available:
